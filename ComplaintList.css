@@ -1,0 +1,35 @@
+/* ComplaintList.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F2EFE7; /* Light beige background for the body */
+    margin: 0;
+    padding: 20px; /* Add some padding around the body */
+  }
+  
+  h2 {
+    color: #006A71; /* Dark teal for the heading */
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+  }
+  
+  li {
+    background-color: #9ACBD0; /* Light teal background for each complaint */
+    border-radius: 8px;
+    margin: 10px 0; /* Space between complaints */
+    padding: 15px; /* Padding inside each complaint */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  h3 {
+    color: #006A71; /* Dark teal for complaint titles */
+  }
+  
+  p {
+    color: #333; /* Dark gray for text */
+  }
+  
