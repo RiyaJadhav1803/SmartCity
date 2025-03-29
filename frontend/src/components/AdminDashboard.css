@@ -1,0 +1,57 @@
+/* AdminDashboard.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F2EFE7;
+    margin: 0;
+    padding: 20px;
+    background: #fbfbfb;
+    /* background-image: url('C:\Users\VEDANT GIRIGOSAVI\Downloads\SmartCity-recovery-branch\SmartCity-recovery-branch\frontend\public\cutcube.png'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    }
+  
+  
+  h2 {
+    color: #006A71;
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #9ACBD0;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    color: #006A71;
+  }
+  
+  p {
+    color: #333;
+  }
+  
+  button {
+    background-color: #48A6A7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #006A71;
+  }

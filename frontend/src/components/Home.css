@@ -1,0 +1,39 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 180px;
+}
+
+.hero-text {
+    max-width: 40%;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    color: #003399;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.read-more {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Hero Image */ 
+.hero-image img {
+    /* margin-top: 6rem; */
+    width: 32rem;
+    height: 32rem;
+}

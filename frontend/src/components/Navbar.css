@@ -1,0 +1,45 @@
+/* Navbar.css */
+
+nav {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    /* padding: 4px; */
+    display: flex;
+    /* justify-content: space-around; */
+    gap: 1rem;
+    /* align-items: center; */
+    /* padding: 10px 20px; */
+    background-color:  #000000; /* Dark teal for the navbar background */
+    color: #F2EFE7; /* Light beige for text color */
+  }
+  
+  h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+    margin-left: 22rem;
+    gap: 6rem; /* Space between links */
+  }
+  
+  li {
+    color: #F2EFE7; /* Light beige for link text */
+    text-decoration: none;
+    /* padding: 5px 10px; */
+    border-radius: 5px;
+    margin: 20px, 10px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+  
+  /* a:hover {
+    background-color: #9ACBD0; 
+    color: #333; 
+  } */
+
+
+  
