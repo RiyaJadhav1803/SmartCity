@@ -8,6 +8,7 @@ import ComplaintForm from './components/ComplaintForm';
 import ComplaintList from './components/ComplaintList';
 import AdminDashboard from './components/AdminDashboard';
 import Home from './components/Home';
+import ProtectedRoute from "./components/ProtectedRoute"; // New protected route
 
 const pageTransition = {
     initial: { opacity: 0, y: -50 },
@@ -73,7 +74,9 @@ const AnimatedRoutes = () => {
                             variants={pageTransition}
                             transition={{ duration: 0.5 }}
                         >
-                            <ComplaintList />
+                            <ProtectedRoute>
+                                <ComplaintList />
+                            </ProtectedRoute>
                         </motion.div>
                     }
                 />

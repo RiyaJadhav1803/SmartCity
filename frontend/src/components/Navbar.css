@@ -1,45 +1,79 @@
-/* Navbar.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
 
-nav {
-    position: fixed;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    /* padding: 4px; */
-    display: flex;
-    /* justify-content: space-around; */
-    gap: 1rem;
-    /* align-items: center; */
-    /* padding: 10px 20px; */
-    background-color:  #000000; /* Dark teal for the navbar background */
-    color: #F2EFE7; /* Light beige for text color */
-  }
-  
-  h2 {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-  
-  ul {
-    display: flex;
-    list-style: none;
-    margin-left: 22rem;
-    gap: 6rem; /* Space between links */
-  }
-  
-  li {
-    color: #F2EFE7; /* Light beige for link text */
-    text-decoration: none;
-    /* padding: 5px 10px; */
-    border-radius: 5px;
-    margin: 20px, 10px;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-  }
-  
-  /* a:hover {
-    background-color: #9ACBD0; 
-    color: #333; 
-  } */
+.navbar {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: #000000; /* Dark background */
+  color: #f2efe7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.logoutButton {
+  background-color: #c81400; /* Red color */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
+.logoutButton:hover {
+  background-color: #cb1400; /* Darker red on hover */
+}
 
-  
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logoImage:hover {
+  transform: scale(1.05);
+}
+
+.navLinks {
+  display: flex;
+  gap: 1rem;
+  /* margin-right: 2rem; */
+  margin-right: 5rem;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  /* margin: 0; */
+}
+
+.navLink {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.navLink:hover {
+  background-color: #333;
+  color: #9acbd0;
+}
+
+.navLink:active {
+  background-color: #555;
+  color: #fff;
+}

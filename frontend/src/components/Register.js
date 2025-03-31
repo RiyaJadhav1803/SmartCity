@@ -1,25 +1,25 @@
 import React, { useState } from "react";
 import axios from "axios";
-import './Register.css'; // Import the CSS file
-
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import './Register.css'; 
+
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Use the full URL for the API endpoint
       const res = await axios.post("http://localhost:5000/api/users/register", {
         name,
         email,
         password,
       });
       alert("Registration successful!");
-      navigate("/");
+      navigate("/login");
     } catch (err) {
       console.error(err.response?.data || err.message);
       alert("Registration failed!");
@@ -27,7 +27,8 @@ const Register = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="register-form">
+      <h2>Create Your Account</h2>
       <input
         type="text"
         value={name}
@@ -50,6 +51,9 @@ const Register = () => {
         required
       />
       <button type="submit">Register</button>
+      <p className="login-link">
+        Already have an account? <Link to="/login">Login</Link>
+      </p>
     </form>
   );
 };

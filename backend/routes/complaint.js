@@ -14,7 +14,6 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage }); 
-
 router.post('/', auth, upload.single('image'), async (req, res) => {
     try {
         const { title, description } = req.body;
@@ -36,6 +35,7 @@ router.post('/', auth, upload.single('image'), async (req, res) => {
 
 router.get('/', async (req, res) => {
     try {
+        // const email = req.user.email;
         const complaints = await Complaint.find().populate('user', 'name');
         res.json(complaints);
     } catch (err) {

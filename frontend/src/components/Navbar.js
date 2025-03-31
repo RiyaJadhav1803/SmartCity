@@ -1,64 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css'; // Import the CSS file
+import './Navbar.css';
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+    const navigate = useNavigate();
+    const handleLogout = () => {
+        localStorage.removeItem("token"); // Clear the token
+        alert("Logged out successfully!");
+        navigate("/login"); // Redirect to login page
+    };
     return (
-        
-        <nav style={styles.nav}>
-            <div style={styles.logo}>
+        <nav className="navbar">
+            <div className="logo">
                 <Link to="/">
-                    <img src="assets/logo.png" alt="Logo" style={styles.logoImage} />
+                    <img src="assets/logo.png" alt="Logo" className="logoImage" />
                 </Link>
             </div>
-            <ul style={styles.navLinks}>
-                <li><Link to="/" style={styles.link}>Home</Link></li>
-                <li><Link to="/login" style={styles.link}>Login</Link></li>
-                <li><Link to="/register" style={styles.link}>Register</Link></li>
-                <li><Link to="/complaints" style={styles.link}>Complaint List</Link></li>
-                <li><Link to="/submit-complaint" style={styles.link}>Submit Complaint</Link></li>
-                <li><Link to="/admin" style={styles.link}>Admin Dashboard</Link></li>
+            <ul className="navLinks">
+                <li><Link to="/" className="navLink">Home</Link></li>
+                <li><Link to="/register" className="navLink">Register</Link></li>
+                <li><Link to="/complaints" className="navLink">Complaint List</Link></li>
+                {/* <li><Link to="/submit-complaint" className="navLink">Submit Complaint</Link></li> */}
+                <li><Link to="/admin" className="navLink">Admin Dashboard</Link></li>
+                <li>
+                    <button onClick={handleLogout} className="logoutButton">Logout</button>
+                </li>
             </ul>
         </nav>
     );
-};
-
-const styles = {
-    nav: {
-        display: 'flex',
-        // justifyContent: 'space-around',
-        // alignItems: 'center',
-        
-        padding: '10px 20px',
-        // backgroundColor: '#333',
-        color: '#fff',
-    },
-    logo: {
-        display: 'flex',
-        alignItems: 'center',
-    },
-    logoImage: {
-        height: '70px', // Adjust the size as needed
-        marginLeft: '10rem',
-        // marginle/ft:
-        // mixBlendMode: 'multiply', // Space between logo and links
-    },
-    brand: {
-        margin: 0, 
-        fontSize: '1.5rem',
-    },
-    navLinks: {
-        display: 'flex',
-        listStyle: 'none',
-        gap: '15px',
-    },
-    link: {
-        color: '#000',       
-        textDecoration: 'none',
-        // padding: '5px 10px',
-        borderRadius: '2px',
-        transition: 'background 0.3s',
-    }
 };
 
 export default Navbar;

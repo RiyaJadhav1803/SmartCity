@@ -1,35 +1,103 @@
-/* ComplaintList.css */
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #F2EFE7; /* Light beige background for the body */
-    margin: 0;
-    padding: 20px; /* Add some padding around the body */
-  }
-  
-  h2 {
-    color: #006A71; /* Dark teal for the heading */
-    text-align: center;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  background-color: #f2efe7;
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  color: #006a71;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px;
+  justify-content: center;
+}
+
+li {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 8px solid #48a6a7; /* Accent border */
+}
+
+li:nth-child(odd) {
+  background-color: #e7f9f9; /* Light teal */
+}
+
+li:nth-child(even) {
+  background-color: #f9f9f9; /* Light gray */
+}
+
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  color: #006a71;
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+}
+
+p {
+  color: #333;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+img {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+}
+
+.add-complaint-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.add-complaint-btn {
+  background-color: #48a6a7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+}
+
+.add-complaint-btn:hover {
+  background-color: #006a71;
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
   ul {
-    list-style-type: none; /* Remove default list styling */
-    padding: 0;
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium screens */
   }
-  
-  li {
-    background-color: #9ACBD0; /* Light teal background for each complaint */
-    border-radius: 8px;
-    margin: 10px 0; /* Space between complaints */
-    padding: 15px; /* Padding inside each complaint */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+@media (max-width: 600px) {
+  ul {
+    grid-template-columns: repeat(1, 1fr); /* 1 item per row on small screens */
   }
-  
-  h3 {
-    color: #006A71; /* Dark teal for complaint titles */
-  }
-  
-  p {
-    color: #333; /* Dark gray for text */
-  }
-  
+}

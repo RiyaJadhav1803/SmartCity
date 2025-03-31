@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import './ComplaintForm.css'; // Import the CSS file
 
 const ComplaintForm = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState(null);
-
+    const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -14,7 +15,7 @@ const ComplaintForm = () => {
     if (!title.trim() || !description.trim()) {
       alert("Title and description are required!");
       return;
-    }
+    } 
 
     const formData = new FormData();
     formData.append("title", title);
@@ -43,12 +44,15 @@ const ComplaintForm = () => {
             Authorization: `Bearer ${token}`,
           },
         }
-      );
+      ); 
 
       alert(response.data.message || "Complaint submitted successfully!");
       setTitle("");
       setDescription("");
+      
       setImage(null); // Reset form after submission
+      navigate("/complaints");
+
     } catch (err) {
       console.error("Submission Error:", err.response?.data || err);
       alert(err.response?.data?.message || "Failed to submit complaint.");
@@ -57,6 +61,7 @@ const ComplaintForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <h2>Submit a Complaint</h2>
       <input
         type="text"
         value={title}
@@ -74,6 +79,7 @@ const ComplaintForm = () => {
       <button type="submit">Submit Complaint</button>
     </form>
   );
+  
 };
 
 export default ComplaintForm;
