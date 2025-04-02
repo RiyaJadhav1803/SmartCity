@@ -3,6 +3,7 @@ const connectDB = require('./config/db');
 const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5000;
+const adminRoutes = require("./routes/admin");
 
 // Middleware
 app.use(express.json());
@@ -19,6 +20,7 @@ connectDB();
 
 // Routes
 app.use('/api/users', require('./routes/user'));
+app.use("/api/admin", adminRoutes);
 app.use('/api/complaints', require('./routes/complaint'));
 
 // Start Server

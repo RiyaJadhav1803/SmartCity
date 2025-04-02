@@ -1,12 +1,9 @@
-/* AdminDashboard.css */
-
 body {
     font-family: Arial, sans-serif;
     background-color: #F2EFE7;
     margin: 0;
     padding: 20px;
     background: #fbfbfb;
-    /* background-image: url('C:\Users\VEDANT GIRIGOSAVI\Downloads\SmartCity-recovery-branch\SmartCity-recovery-branch\frontend\public\cutcube.png'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,9 +12,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     }
-  
-  
-  h2 {
+h2 {
     color: #006A71;
     text-align: center;
   }

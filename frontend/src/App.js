@@ -9,6 +9,7 @@ import ComplaintList from './components/ComplaintList';
 import AdminDashboard from './components/AdminDashboard';
 import Home from './components/Home';
 import ProtectedRoute from "./components/ProtectedRoute"; // New protected route
+import AdminLogin from './components/AdminLogin';
 
 const pageTransition = {
     initial: { opacity: 0, y: -50 },
@@ -94,8 +95,9 @@ const AnimatedRoutes = () => {
                         </motion.div>
                     }
                 />
+                <Route path="/admin-login" element={<AdminLogin />} />
                 <Route
-                    path='/admin'
+                    path='/admin-dashboard'
                     element={
                         <motion.div
                             initial="initial"
@@ -108,6 +110,8 @@ const AnimatedRoutes = () => {
                         </motion.div>
                     }
                 />
+                
+                 {/* <Route path="/admin-dashboard" element={<AdminDashboard />} /> */}
             </Routes>
         </AnimatePresence>
     );

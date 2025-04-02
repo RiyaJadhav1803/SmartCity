@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import './AdminDashboard.css'; // Import the CSS file
+import { useNavigate } from "react-router-dom";
 
 const AdminDashboard = () => {
   const [complaints, setComplaints] = useState([]);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchComplaints = async () => {
       try {
@@ -39,6 +40,11 @@ const AdminDashboard = () => {
     }
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("adminToken");
+    navigate("/admin-login"); // Redirect to the admin login page
+  };
+
   return (
     <div>
       <h2>Admin Dashboard</h2>
@@ -54,6 +60,9 @@ const AdminDashboard = () => {
           </li>
         ))}
       </ul>
+      <button onClick={handleLogout} style={{ marginTop: "20px" }}>
+        Logout
+      </button>
     </div>
   );
 };
