@@ -110,9 +110,7 @@ const AnimatedRoutes = () => {
                         </motion.div>
                     }
                 />
-                
-                 {/* <Route path="/admin-dashboard" element={<AdminDashboard />} /> */}
-            </Routes>
+                </Routes>
         </AnimatePresence>
     );
 };

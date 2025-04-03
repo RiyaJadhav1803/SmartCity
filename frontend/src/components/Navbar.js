@@ -22,11 +22,13 @@ const Navbar = () => {
                 <li><Link to="/register" className="navLink">Register</Link></li>
                 <li><Link to="/complaints" className="navLink">Complaint List</Link></li>
                 {/* <li><Link to="/submit-complaint" className="navLink">Submit Complaint</Link></li> */}
-                <li><Link to="/admin-login" className="navLink">Admin Dashboard</Link></li>
-                <li>
+                {/* <li><Link to="/admin-login" className="navLink">Admin Dashboard</Link></li> */}
+                {/* <li>
                     <button onClick={handleLogout} className="logoutButton">Logout</button>
-                </li>
+                </li> */}
             </ul>
+            <button onClick={handleLogout} className="logoutButton">Logout</button>
+
         </nav>
     );
 };

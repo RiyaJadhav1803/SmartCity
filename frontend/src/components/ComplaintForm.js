@@ -44,7 +44,7 @@ const ComplaintForm = () => {
             Authorization: `Bearer ${token}`,
           },
         }
-      ); 
+      );     
 
       alert(response.data.message || "Complaint submitted successfully!");
       setTitle("");

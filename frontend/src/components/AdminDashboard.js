@@ -18,7 +18,7 @@ const AdminDashboard = () => {
         console.error("Failed to fetch complaints", err);
       }
     };
-
+    
     fetchComplaints();
   }, []);
 
@@ -68,3 +68,4 @@ const AdminDashboard = () => {
 };
 
 export default AdminDashboard;
+

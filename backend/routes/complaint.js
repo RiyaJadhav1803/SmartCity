@@ -10,7 +10,7 @@ const storage = multer.diskStorage({
     },
     filename: (req, file, cb) => {
         cb(null, Date.now() + '-' + file.originalname); 
-    }
+    }  
 });
 
 const upload = multer({ storage }); 
@@ -31,11 +31,10 @@ router.post('/', auth, upload.single('image'), async (req, res) => {
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
-});
+});   
 
 router.get('/', async (req, res) => {
     try {
-        // const email = req.user.email;
         const complaints = await Complaint.find().populate('user', 'name');
         res.json(complaints);
     } catch (err) {

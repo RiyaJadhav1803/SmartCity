@@ -9,7 +9,6 @@ body {
 }
 
 .register-form {
-  /* backdrop-filter: blur(20px); */
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 15px;
   padding: 30px;
