@@ -1,19 +1,24 @@
+/* Global body styles */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f2efe7;
+  font-family: "Arial", sans-serif;
+  background-color: #68ebe4; /* Soft background color */
   margin: 0;
   padding: 20px;
+  color: #333; /* Default text color for readability */
 }
 
+/* Main heading style */
 h2 {
-  color: #006a71;
+  color: #006a71; /* Deep teal */
   text-align: center;
   margin-top: 5rem;
   margin-bottom: 20px;
   font-size: 2rem;
   font-weight: bold;
+  letter-spacing: 1px; /* Slight letter-spacing for emphasis */
 }
 
+/* Styling for unordered list */
 ul {
   list-style-type: none;
   padding: 0;
@@ -21,42 +26,52 @@ ul {
   grid-template-columns: repeat(3, 1fr); /* 3 items per row */
   gap: 20px;
   justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px; /* Restrict max-width for better alignment */
 }
 
+/* List item (li) styles */
 li {
-  background-color: #ffffff;
+  background-color: #caadad;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-left: 8px solid #48a6a7; /* Accent border */
+  background-color: #f9f9f9; /* Default background color for list items */
 }
 
+/* Alternate background colors for list items */
 li:nth-child(odd) {
-  background-color: #e7f9f9; /* Light teal */
+  background-color: #e7f9f9; /* Light teal for odd items */
 }
 
 li:nth-child(even) {
-  background-color: #f9f9f9; /* Light gray */
+  background-color: #f9f9f9; /* Light gray for even items */
 }
 
+/* Hover effect for list items */
 li:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Subheading (h3) styles */
 h3 {
   color: #006a71;
   font-size: 1.5rem;
   margin: 0 0 10px;
+  font-weight: bold;
 }
 
+/* Paragraph text inside list items */
 p {
   color: #333;
   font-size: 1rem;
   margin: 5px 0;
 }
 
+/* Image styling */
 img {
   display: block;
   margin: 10px auto;
@@ -66,14 +81,16 @@ img {
   border: 2px solid #ddd;
 }
 
+/* Container for the add-complaint button */
 .add-complaint-container {
   text-align: center;
   margin-top: 30px;
 }
 
+/* Add complaint button styling */
 .add-complaint-btn {
-  background-color: #48a6a7;
-  color: white;
+  background-color: #327172;
+  color: rgb(33, 17, 17);
   border: none;
   border-radius: 8px;
   padding: 12px 24px;
@@ -83,19 +100,34 @@ img {
   transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 20px auto;
+  display: inline-block; /* Center button */
 }
 
+/* Button hover effect */
 .add-complaint-btn:hover {
-  background-color: #006a71;
-  transform: scale(1.05);
+  background-color: #146c72;
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
+/* Button active state */
+.add-complaint-btn:active {
+  background-color: #98d0d3;
+  transform: scale(1); /* Reset scaling on click */
+}
+
+/* Media queries for responsiveness */
+
+/* Medium screens (Tablets and below) */
 @media (max-width: 900px) {
   ul {
-    grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium screens */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 items per row on medium screens */
   }
 }
 
+/* Small screens (Mobile devices) */
 @media (max-width: 600px) {
   ul {
     grid-template-columns: repeat(1, 1fr); /* 1 item per row on small screens */

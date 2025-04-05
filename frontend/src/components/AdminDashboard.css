@@ -1,52 +1,98 @@
+/* Global Body Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #F2EFE7;
-    margin: 0;
-    padding: 20px;
-    background: #fbfbfb;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    opacity: 0.8;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    }
+  font-family: Arial, sans-serif;
+  background-color: #fcf5e3;
+  margin: 0;
+  padding: 20px;
+  background: #42d4c3;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.9; /* Slightly adjusted for better contrast */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 h2 {
-    color: #006A71;
-    text-align: center;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    background-color: #9ACBD0;
-    border-radius: 8px;
-    margin: 10px 0;
+  color: #006a71;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* List Styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #1e6a72;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Subheading Styles */
+h3 {
+  color: #006a71;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Paragraph Styles */
+p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Button Styles */
+button {
+  background-color: #0d4849;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #268b92;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+  body {
     padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
   h3 {
-    color: #006A71;
+    font-size: 1.25rem;
   }
-  
-  p {
-    color: #333;
+
+  li {
+    padding: 12px;
   }
-  
+
   button {
-    background-color: #48A6A7;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
+    padding: 8px 12px;
   }
-  
-  button:hover {
-    background-color: #006A71;
-  }
+}

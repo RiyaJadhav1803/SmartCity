@@ -1,38 +1,73 @@
+/* General App Styles */
 .App {
   text-align: center;
+  background-color: #136453;
+  min-height: 100vh; /* Ensures the background covers the full screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+/* App Logo */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px; /* Adds some space below the logo */
 }
 
+/* Media Queries */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* App Header Styles */
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensures the header takes the full height */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(1rem + 2vmin);
+  color: rgb(184, 156, 156);
+  padding: 20px;
+  text-align: center;
+  width: 100%; /* Ensure it stretches across the full screen */
 }
 
+/* App Link Styling */
 .App-link {
   color: #82c7da;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
+.App-link:hover {
+  color: #a0d4e0;
+}
+
+/* Keyframes for Logo Spin Animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App-logo {
+    height: 30vmin; /* Adjust logo size for smaller screens */
+  }
+
+  .App-header {
+    font-size: calc(1rem + 1.5vmin); /* Slightly smaller text on mobile */
   }
 }
